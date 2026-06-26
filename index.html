@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DCADD | AWS Cloud Architecture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+
+    <div class="card">
+        <div class="status">
+            <span class="dot"></span>
+            System Healthy • AWS Infrastructure Online
+        </div>
+
+        <h1>DCADD Master Project</h1>
+        <p class="subtitle">Scalable Cloud-Native Architecture on Amazon Web Services</p>
+
+        <div class="info">
+            <p>
+                This project demonstrates a production-like AWS architecture designed for high availability,
+                fault tolerance, and secure network segmentation using a multi-tier approach.
+            </p>
+
+            <p>
+                Traffic is distributed through an Application Load Balancer (ALB), which routes requests to
+                healthy EC2 instances deployed inside private subnets, ensuring zero direct public access to backend services.
+            </p>
+        </div>
+
+        <div class="architecture">
+            <h2>Architecture Overview</h2>
+            <p>Internet → ALB → Private Subnet (EC2) → Application Layer</p>
+        </div>
+
+        <div class="hint">
+            If you can see this page, your request successfully passed through AWS Load Balancer and reached a healthy backend instance.
+        </div>
+
+        <div class="footer">
+            Built as part of a Master’s thesis focused on Cloud Computing, DevOps practices, and Infrastructure as Code (IaC).
+        </div>
+    </div>
+</body>
+</html>
