@@ -1,0 +1,30 @@
+name: Deploy to AWS ASG
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials with OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::411706530476:role/GitHubActionsASGRefreshRole
+          aws-region: eu-central-1
+
+      - name: Start Auto Scaling Instance Refresh
+        run: |
+          aws autoscaling start-instance-refresh \
+            --auto-scaling-group-name Autoscalling-p1 \
+            --preferences '{"MinHealthyPercentage":50,"InstanceWarmup":120,"SkipMatching":false}'
