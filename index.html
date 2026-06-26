@@ -2,46 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DCADD | AWS Cloud Architecture</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="background-glow"></div>
+
+<div class="background-glow"></div>
+
+<div class="container">
 
     <div class="card">
+
         <div class="status">
             <span class="dot"></span>
-            System Healthy • AWS Infrastructure Online
+            AWS Infrastructure • Online
         </div>
 
-        <h1>DCADD Master Project</h1>
-        <p class="subtitle">Scalable Cloud-Native Architecture on Amazon Web Services</p>
+        <h1>☁️ DCADD Master Project</h1>
+
+        <p class="subtitle">
+            Highly Available & Secure Cloud Architecture on Amazon Web Services
+        </p>
 
         <div class="info">
             <p>
-                This project demonstrates a production-like AWS architecture designed for high availability,
-                fault tolerance, and secure network segmentation using a multi-tier approach.
+                This project demonstrates a modern enterprise-grade AWS infrastructure
+                built using cloud-native services and industry best practices.
             </p>
 
             <p>
-                Traffic is distributed through an Application Load Balancer (ALB), which routes requests to
-                healthy EC2 instances deployed inside private subnets, ensuring zero direct public access to backend services.
+                The environment is designed for scalability, high availability,
+                fault tolerance, and security using a multi-tier architecture.
             </p>
         </div>
 
-        <div class="architecture">
-            <h2>Architecture Overview</h2>
-            <p>Internet → ALB → Private Subnet (EC2) → Application Layer</p>
+        <div class="features">
+
+            <div class="feature-card">
+                <h3>🌍 Networking</h3>
+                <p>Amazon VPC, Public & Private Subnets, Internet Gateway, NAT Gateway.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>⚖️ Load Balancing</h3>
+                <p>Application Load Balancer distributes traffic across multiple EC2 instances.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>💻 Compute</h3>
+                <p>Amazon EC2 Auto Scaling ensures elasticity and fault tolerance.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🗄 Database</h3>
+                <p>Amazon RDS deployed in Multi-AZ configuration for high availability.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔒 Security</h3>
+                <p>IAM Roles, Security Groups, NACLs and least privilege access.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📈 Monitoring</h3>
+                <p>Amazon CloudWatch provides monitoring, alarms and metrics.</p>
+            </div>
+
         </div>
 
-        <div class="hint">
-            If you can see this page, your request successfully passed through AWS Load Balancer and reached a healthy backend instance.
+        <div class="buttons">
+            <a href="#" class="btn primary">View Architecture</a>
+            <a href="#" class="btn secondary">Documentation</a>
         </div>
 
-        <div class="footer">
-            Built as part of a Master’s thesis focused on Cloud Computing, DevOps practices, and Infrastructure as Code (IaC).
-        </div>
     </div>
+
+</div>
+
 </body>
 </html>
